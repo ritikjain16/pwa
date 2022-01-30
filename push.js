@@ -9,9 +9,16 @@ let vapidkeys = {
     privateKey: 'qeScOcGPBLIIGYirILuIjawndFE1Sk5i7kc7VCeDkRg'
 }
 
-push.setVapidDetails('mailto:ritik9628@gmail.com',vapidkeys.publicKey,vapidkeys.privateKey);
+push.setVapidDetails('mailto:ritik9628@gmail.com', vapidkeys.publicKey, vapidkeys.privateKey);
 
-let sub={
-    
+let sub = {
+    endpoint: "https://fcm.googleapis.com/fcm/send/e9Mn97hOkIE:APA91bHwEvg46sCiQkoT2n1iKym9of514AoKJNKJPGgrVCzcIpjRUcQFnXga89JLwHiMQeQoYfzP4hJourvQfvdhS-3m5iZVLneKqg7tYNHnls81O7_x5HoznuyYSpvaa7nhcrqD0pUd",
+    expirationTime: null,
+    keys:
+    {
+        p256dh: "BGvqGQ7F-E17JEA5kmpTyZrwlYq0x_9c6GeGgDOziRnjrgkaD9lG2ZHvF4scRW_uO8YsmdpLTYHsWAfzo3ZR4es",
+        auth: "jaaqBKqre_CCuDj1ESSRbw"
+    }
 }
-push.sendNotification(sub,'test-message')
+
+push.sendNotification(sub, 'test-message')
