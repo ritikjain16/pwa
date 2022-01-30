@@ -21,4 +21,4 @@ let sub = {
     }
 }
 
-push.sendNotification(sub, 'test-message')
+push.sendNotification(sub, 'test message')
